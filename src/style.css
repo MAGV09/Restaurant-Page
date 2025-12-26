@@ -111,4 +111,6 @@ button:hover{
 footer{
   display: flex;
   justify-content: space-around;
+  font-size: 1rem;
+  width: 30rem;
 }

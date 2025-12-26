@@ -1,3 +1,5 @@
 import 'modern-normalize/modern-normalize.css'
 import './style.css'
-console.log('oi');
+import createContent from './pageLoad'
+
+createContent()

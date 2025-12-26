@@ -10,7 +10,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-
 h1,
 h2,
 h3,
@@ -48,16 +47,15 @@ button {
 }
 
 img {
-width: 8rem;
+  width: 8rem;
 }
 body {
- 
-  font-family:"Playfair Display", system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Playfair Display', system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   padding: 2rem;
-  background-color: #1C1C1C;
-  color: #C9A227;
+  background-color: #1c1c1c;
+  color: #c9a227;
 }
 header {
   display: grid;
@@ -72,11 +70,11 @@ header {
   flex-direction: column;
   grid-area: logo;
   align-items: center;
- height: 9rem;
+  height: 9rem;
 }
-.logo-container>h1{
-font-weight: bold;
-font-size: 2.5rem;
+.logo-container > h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
 }
 header > nav {
   grid-area: nav;
@@ -85,18 +83,17 @@ header > nav {
   width: 40rem;
   height: 8rem;
 }
-header button{
+header button {
   border: none;
   font-size: 1.5rem;
-  background:none;
+  background: none;
   cursor: pointer;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
-button:hover{
+button:hover {
   color: #9b7e1e;
-
 }
-.content-container{
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,12 +102,32 @@ button:hover{
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.content-container img{
+.content-container img {
   width: 75rem;
 }
-footer{
+footer {
   display: flex;
   justify-content: space-around;
   font-size: 1rem;
   width: 30rem;
+}
+.active {
+  color: #c9a227;
+}
+.menus,
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menus {
+  gap: 2rem;
+}
+.menu-item {
+  /* border-bottom: 1px solid #c9a227; */
+  line-height: 1;
+}
+.menu-item>img{
+  width: 25rem;
 }

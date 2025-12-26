@@ -10,9 +10,12 @@ function createDiv() {
 }
 
 function createContent() {
+  const homeBtn = document.querySelector('#home-btn');
+  homeBtn.classList.add('active');
+
   const content = document.querySelector('#content');
-  const div1 = createDiv();
-  const div2 = createDiv();
+  const locationContainer = createDiv();
+  const hoursContainer = createDiv();
   const img = document.createElement('img');
   const footer = document.createElement('footer');
   const p1 = createP();
@@ -29,18 +32,18 @@ function createContent() {
   content.appendChild(footer);
 
   p2.textContent = '1153 NA Grand Hotel';
-  div1.textContent = 'Locations:';
-  div1.appendChild(p2);
-  footer.appendChild(div1);
+  locationContainer.textContent = 'Locations:';
+  locationContainer.appendChild(p2);
+  footer.appendChild(locationContainer);
 
   p3.textContent = 'Sunday: 8am - 8pm';
   p4.textContent = 'Friday: 6am - 10pm';
   p5.textContent = 'Saturday: 8am - 10pm';
-  div2.textContent = 'Hours:';
-  div2.appendChild(p3);
-  div2.appendChild(p4);
-  div2.appendChild(p5);
-  footer.appendChild(div2);
+  hoursContainer.textContent = 'Hours:';
+  hoursContainer.appendChild(p3);
+  hoursContainer.appendChild(p4);
+  hoursContainer.appendChild(p5);
+  footer.appendChild(hoursContainer);
 }
-export {createP,createDiv}
-export default createContent
+export { createP, createDiv };
+export default createContent;

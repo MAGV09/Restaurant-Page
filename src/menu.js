@@ -5,29 +5,51 @@ import shrimpImgPath from '../imgs/shrimp.jpg';
 import wagyuImgPath from '../imgs/wagyu.jpg';
 import burgerImgPath from '../imgs/burger.jpg';
 
+const menu = [
+  {
+    title: 'Caviar',
+    price: '25.99$',
+    imgPath: caviarImgPath,
+  },
+  {
+    title: 'A5 Wagyu',
+    price: '79.99$',
+    imgPath: wagyuImgPath,
+  },
+  {
+    title: 'Fancy Shrimp',
+    price: '34.99$',
+    imgPath: shrimpImgPath,
+  },
+  {
+    title: 'Caramelized Onions Burger',
+    price: '19.99$',
+    imgPath: burgerImgPath,
+  },
+];
 function createMenu() {
   const menuBtn = document.querySelector('#menu-btn');
   menuBtn.classList.add('active');
+  renderMenu();
 
-  const item1 = createMenuCard();
-  const item2 = createMenuCard();
-  const item3 = createMenuCard();
-  const item4 = createMenuCard();
-
-  item1.fillData('Caviar', '25.99$', caviarImgPath);
-  item2.fillData('A5 Wagyu', '79.99$', wagyuImgPath);
-  item3.fillData('Fancy Shrimp', '34.99$', shrimpImgPath);
-  item4.fillData('Caramelized Onions Burger', '19.99$', burgerImgPath);
-
+}
+function renderMenu() {
   const menuContainer = createDiv();
   menuContainer.classList.add('menus');
   content.appendChild(menuContainer);
-  menuContainer.appendChild(item1.container);
-  menuContainer.appendChild(item2.container);
-  menuContainer.appendChild(item3.container);
-  menuContainer.appendChild(item4.container);
+  menu.forEach((item) => {
+    let {
+      itemPrice: price,
+      itemTitle: title,
+      container,
+      img,
+    } = createMenuCard();
+    price.textContent = item.price;
+    title.textContent = item.title;
+    img.src = item.imgPath;
+    menuContainer.appendChild(container);
+  });
 }
-
 function createMenuCard() {
   const container = createDiv();
   container.classList.add('menu-item');

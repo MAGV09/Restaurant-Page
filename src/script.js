@@ -6,13 +6,9 @@ import renderAbout from './about.js'
 import renderContact from './contact.js'
 const nav = document.querySelector('#navigation');
 const content = document.querySelector('#content');
-// const homeBtn = document.querySelector('#home');
-// const menuBtn = document.querySelector('#menu');
-// const aboutBtn = document.querySelector('#about');
-// const contactBtn = document.querySelector('#contact');
 
 //initalize
-// renderHome();
+renderHome();
 nav.addEventListener('click', (e) => handleClick(e));
 
 function handleClick(e) {

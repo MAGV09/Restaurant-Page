@@ -5,8 +5,6 @@ import shrimpImgPath from '../imgs/shrimp.jpg';
 import wagyuImgPath from '../imgs/wagyu.jpg';
 import burgerImgPath from '../imgs/burger.jpg';
 
-const menuContainer = createDiv();
-
 function createMenu() {
   const menuBtn = document.querySelector('#menu-btn');
   menuBtn.classList.add('active');
@@ -21,8 +19,13 @@ function createMenu() {
   item3.fillData('Fancy Shrimp', '34.99$', shrimpImgPath);
   item4.fillData('Caramelized Onions Burger', '19.99$', burgerImgPath);
 
+  const menuContainer = createDiv();
   menuContainer.classList.add('menus');
   content.appendChild(menuContainer);
+  menuContainer.appendChild(item1.container);
+  menuContainer.appendChild(item2.container);
+  menuContainer.appendChild(item3.container);
+  menuContainer.appendChild(item4.container);
 }
 
 function createMenuCard() {
@@ -36,9 +39,8 @@ function createMenuCard() {
   container.appendChild(img);
   container.appendChild(itemTitle);
   container.appendChild(itemPrice);
-  menuContainer.appendChild(container);
 
-  const fillData = (title, price, imgPath, parentContainer) => {
+  const fillData = (title, price, imgPath) => {
     itemTitle.textContent = title;
     itemPrice.textContent = price;
     img.src = imgPath;

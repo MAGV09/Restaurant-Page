@@ -2,7 +2,7 @@ import 'modern-normalize/modern-normalize.css';
 import './style.css';
 import renderHome from './pageLoad.js';
 import renderMenu from './menu.js';
-import './about.js'
+import renderAbout from './about.js'
 const nav = document.querySelector('#navigation');
 const content = document.querySelector('#content');
 // const homeBtn = document.querySelector('#home');

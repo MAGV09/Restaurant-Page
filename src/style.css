@@ -132,3 +132,8 @@ footer {
   width: 25rem;
   margin-bottom: 0.4rem;
 }
+
+.about{
+  text-align: left;
+  font-size: 1.7rem;
+}

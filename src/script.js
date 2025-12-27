@@ -2,12 +2,13 @@ import 'modern-normalize/modern-normalize.css';
 import './style.css';
 import renderHome from './pageLoad.js';
 import renderMenu from './menu.js';
+import './about.js'
 const nav = document.querySelector('#navigation');
 const content = document.querySelector('#content');
-const homeBtn = document.querySelector('#home');
-const menuBtn = document.querySelector('#menu');
-const aboutBtn = document.querySelector('#about');
-const contactBtn = document.querySelector('#contact');
+// const homeBtn = document.querySelector('#home');
+// const menuBtn = document.querySelector('#menu');
+// const aboutBtn = document.querySelector('#about');
+// const contactBtn = document.querySelector('#contact');
 
 //initalize
 // renderHome();
@@ -15,7 +16,7 @@ nav.addEventListener('click', (e) => handleClick(e));
 
 function handleClick(e) {
   if (e.target.id !== 'navigation') resetContent();
-  
+
   switch (e.target.id) {
     case 'home-btn':
       renderHome();
@@ -37,6 +38,10 @@ function handleClick(e) {
 
 function resetContent() {
   content.textContent = '';
+  const active = document.querySelector('.active');
+  if (active) {
+    active.classList.remove('active');
+  }
 }
 
 export { content };

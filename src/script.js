@@ -3,6 +3,7 @@ import './style.css';
 import renderHome from './pageLoad.js';
 import renderMenu from './menu.js';
 import renderAbout from './about.js'
+import renderContact from './contact.js'
 const nav = document.querySelector('#navigation');
 const content = document.querySelector('#content');
 // const homeBtn = document.querySelector('#home');

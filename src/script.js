@@ -1,8 +1,8 @@
 import 'modern-normalize/modern-normalize.css';
 import './style.css';
-import renderHome from './pageLoad';
-
-const nav =document.querySelector('#navigation')
+import renderHome from './pageLoad.js';
+import renderMenu from './menu.js';
+const nav = document.querySelector('#navigation');
 const content = document.querySelector('#content');
 const homeBtn = document.querySelector('#home');
 const menuBtn = document.querySelector('#menu');
@@ -14,8 +14,8 @@ const contactBtn = document.querySelector('#contact');
 nav.addEventListener('click', (e) => handleClick(e));
 
 function handleClick(e) {
-  resetContent();
-console.log('oi');
+  if (e.target.id !== 'navigation') resetContent();
+  
   switch (e.target.id) {
     case 'home-btn':
       renderHome();
@@ -38,3 +38,5 @@ console.log('oi');
 function resetContent() {
   content.textContent = '';
 }
+
+export { content };

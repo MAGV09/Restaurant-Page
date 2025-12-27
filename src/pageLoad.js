@@ -1,4 +1,5 @@
 import imgPath from '../imgs/food.jpg';
+import { content } from './script';
 function createP() {
   const p = document.createElement('p');
   return p;
@@ -13,7 +14,6 @@ function createContent() {
   const homeBtn = document.querySelector('#home-btn');
   homeBtn.classList.add('active');
 
-  const content = document.querySelector('#content');
   const locationContainer = createDiv();
   const hoursContainer = createDiv();
   const img = document.createElement('img');
